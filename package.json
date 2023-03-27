@@ -17,6 +17,7 @@
   "author": "Misskey.art",
   "license": "MIT",
   "devDependencies": {
+    "jest": "29.5.0",
     "rome": "11.0.0"
   }
 }
