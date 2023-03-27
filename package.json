@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "rome check .",
+    "lintfix": "rome check --apply-suggested .",
+    "format": "rome format --write .",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "packageManager": "pnpm@7.30.5",
@@ -12,5 +15,8 @@
   },
   "keywords": [],
   "author": "Misskey.art",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rome": "11.0.0"
+  }
 }
