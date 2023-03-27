@@ -1,0 +1,19 @@
+name: Maintain code quality
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.fork
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3
+      - uses: pnpm/action-setup@0609f0983b7a228f052f81ef4c3d6510cae254ad
+        name: Install pnpm
+        id: pnpm-install
+      - name: Test
+        run: pnpm test
