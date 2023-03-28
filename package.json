@@ -18,7 +18,7 @@
   "author": "Misskey.art",
   "license": "MIT",
   "dependencies": {
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^4.0.0"
   },
   "devDependencies": {
     "husky": "8.0.3",
