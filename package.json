@@ -1,6 +1,6 @@
 {
   "name": "remark-backslash-breaks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Remark plugin (for Docusaurus) to add break with backslash",
   "main": "src/index.js",
   "scripts": {
