@@ -1,13 +1,13 @@
 {
   "name": "remark-backslash-breaks",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Remark plugin (for Docusaurus) to add break with backslash",
+  "main": "src/index.js",
   "scripts": {
     "lint": "rome check .",
     "lintfix": "rome check --apply-suggested .",
     "format": "rome format --write .",
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "jest",
     "prepare": "husky install || [ $? = 127 ]"
   },
   "packageManager": "pnpm@7.30.5",
@@ -17,9 +17,16 @@
   "keywords": [],
   "author": "Misskey.art",
   "license": "MIT",
+  "dependencies": {
+    "unist-util-visit": "^2.0.3"
+  },
   "devDependencies": {
+    "husky": "8.0.3",
     "jest": "29.5.0",
+    "rehype-stringify": "8.0.0",
+    "remark-parse": "8.0.3",
+    "remark-rehype": "8.1.0",
     "rome": "11.0.0",
-    "husky": "8.0.3"
+    "unified": "9.2.2"
   }
 }
