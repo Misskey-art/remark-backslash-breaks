@@ -15,5 +15,7 @@ jobs:
       - uses: pnpm/action-setup@0609f0983b7a228f052f81ef4c3d6510cae254ad
         name: Install pnpm
         id: pnpm-install
+        with:
+          run_install: true
       - name: Test
         run: pnpm test
