@@ -1,7 +1,7 @@
 #!/bin/bash -eu
 
 version_string=$(cat package.json | jq -r '.version')
-pr=$( (git log --oneline @..."$version_string" || git log --oneline) | sed -nE 's/.+\((#[0-9]+)\)$/\1/p')
+pr=$( (git log --oneline @...v"$version_string" || git log --oneline) | sed -nE 's/.+\((#[0-9]+)\)$/\1/p')
 labels=$( echo "$pr" | xargs -n1 gh pr view --json labels -q '.labels[].name')
 mapfile -t version < <(printf '%s\n' "${version_string//./$'\n'}")
 if printf '%s\n' "${labels[@]}" | grep -qx 'semver:major'; then
