@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Remark plugin (for Docusaurus) to add break with backslash",
   "main": "src/index.js",
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "lint": "rome check .",
     "lintfix": "rome check --apply-suggested .",
