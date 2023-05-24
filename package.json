@@ -1,11 +1,25 @@
 {
-  "name": "remark-backslash-breaks",
+  "name": "@misskey-art/remark-backslash-breaks",
   "version": "1.0.0",
   "description": "Remark plugin (for Docusaurus) to add break with backslash",
-  "main": "src/index.js",
+  "keywords": [
+    "remark-plugin"
+  ],
+  "homepage": "https://github.com/Misskey-art/remark-backslash-breaks#readme",
+  "bugs": "https://github.com/Misskey-art/remark-backslash-breaks/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Misskey.art",
+    "url": "https://misskey.art/"
+  },
   "files": [
     "/src"
   ],
+  "repository": "github:Misskey-art/remark-backslash-breaks",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "src/index.js",
   "scripts": {
     "lint": "rome check .",
     "lintfix": "rome check --apply-suggested .",
@@ -17,9 +31,6 @@
   "engines": {
     "npm": "This project is configured to use pnpm"
   },
-  "keywords": [],
-  "author": "Misskey.art",
-  "license": "MIT",
   "dependencies": {
     "unist-util-visit": "^2.0.3"
   },
