@@ -28,9 +28,6 @@
     "prepare": "husky install || [ $? = 127 ]"
   },
   "packageManager": "pnpm@8.5.1",
-  "engines": {
-    "npm": "This project is configured to use pnpm"
-  },
   "dependencies": {
     "unist-util-visit": "^2.0.3"
   },
