@@ -28,7 +28,7 @@ jobs:
           git config push.default current
       - name: npm pack
         # https://github.com/npm/cli/pull/5894
-        run : filename=$(npm pack --json --pack-destination /tmp | jq -r '.[].filename')
+        run : filename=$(npm pack --json --pack-destination /tmp | jq -r '.[].filename') >> "$GITHUB_ENV"
       - name: switch branch
         run: git switch npm-dev || ( git switch --orphan npm-dev && git commit --allow-empty -m '📦' )
       - name: merge start
@@ -36,7 +36,7 @@ jobs:
       - name: delete old files
         run: find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
       - name: unpack
-        run: tar -xf /tmp/$filename && rsync -r --remove-source-files package/ .
+        run: tar -xf /tmp/${{ env.filename }} && rsync -r --remove-source-files package/ .
       - name: commit and push
         run: |
           git add .
