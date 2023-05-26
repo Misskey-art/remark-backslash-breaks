@@ -28,7 +28,7 @@ jobs:
           git config push.default current
       - name: npm pack
         # https://github.com/npm/cli/pull/5894
-        run : filename=$(npm pack --json --pack-destination /tmp | jq -r '.[].filename') >> "$GITHUB_ENV"
+        run : echo "filename=$(npm pack --json --pack-destination /tmp | jq -r '.[].filename')" >> "$GITHUB_ENV"
       - name: switch branch
         run: git switch npm-dev || ( git switch --orphan npm-dev && git commit --allow-empty -m '📦' )
       - name: merge start
