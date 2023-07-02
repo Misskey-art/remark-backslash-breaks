@@ -27,7 +27,7 @@
     "test": "jest",
     "prepare": "husky install || [ $? = 127 ]"
   },
-  "packageManager": "pnpm@8.6.3",
+  "packageManager": "pnpm@8.6.5",
   "dependencies": {
     "unist-util-visit": "^2.0.3"
   },
