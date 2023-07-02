@@ -5,9 +5,24 @@
     ":rebaseStalePrs",
     ":disableRateLimiting",
     ":maintainLockFilesWeekly",
-    ":label(dependencies)",
+    ":labels(dependencies, semver:none)",
     ":assignAndReview(Mogyuchi)",
     ":semanticCommits",
-    ":disablePrControls"
+    ":disablePrControls",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": ["dependencies", "require"],
+      "labels": ["dependencies", "semver:patch"]
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)\\.npmrc$"],
+      "matchStrings": ["use-node-version=(?<currentValue>.*?)\\n"],
+      "depNameTemplate": "node",
+      "datasourceTemplate": "node-version"
+    }
   ]
 }
