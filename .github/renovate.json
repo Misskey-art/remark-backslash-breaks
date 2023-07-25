@@ -7,6 +7,7 @@
     ":maintainLockFilesWeekly",
     ":labels(dependencies, semver:none)",
     ":assignAndReview(Mogyuchi)",
+    ":automergeAll",
     ":semanticCommits",
     ":disablePrControls",
     "helpers:pinGitHubActionDigests"
