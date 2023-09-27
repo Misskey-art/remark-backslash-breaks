@@ -10,7 +10,7 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@96f53100ba2a5449eb71d2e6604bbcd94b9449b5
-      - uses: actions/setup-node@d82f92a0eb28e5699f87460c19fc2c674da76d01
+      - uses: actions/setup-node@72c43c2d8fa01b0e1ca5fc3f8cb258c8d8bd286d
         with:
           node-version: 18
       - run: npm publish
