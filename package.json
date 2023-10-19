@@ -29,7 +29,7 @@
   },
   "packageManager": "pnpm@8.6.11",
   "dependencies": {
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "husky": "8.0.3",
