@@ -14,7 +14,7 @@ jobs:
     if: github.event_name == 'push' || github.event.pull_request.head.repo.fork
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@96f53100ba2a5449eb71d2e6604bbcd94b9449b5
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
       - uses: pnpm/action-setup@d2613e087f2e0aa841925861c5a5f7395d552177
         name: Install pnpm
         id: pnpm-install
